@@ -1,0 +1,175 @@
+﻿@{
+    ViewData["Title"] = "Página de Inicio";
+}
+
+<div id="carrusel">
+    <div class="contenedor-imagenes">
+        @foreach (var imagen in ViewBag.CarruselImagenes)
+        {
+            <img src="@imagen" alt="Imagen del carrusel" class="carrusel-imagen">
+        }
+    </div>
+    <button class="flecha anterior" onclick="cambiarImagen(-1)">❮</button>
+    <button class="flecha siguiente" onclick="cambiarImagen(1)">❯</button>
+    <div class="puntos">
+        @{
+            int contador = 1;
+        }
+        @foreach (var imagen in ViewBag.CarruselImagenes)
+        {
+            <span class="punto" onclick="imagenActual(@contador)"></span>
+            contador++;
+        }
+    </div>
+</div>
+<br>
+
+<section class="noticias">
+    <article class="noticia">
+        <h2>Mate electrico: ¿sirve o es una estafa?</h2>
+        <div id="mateelectrico">
+            <img src="~/images/mate-calabaza-wide-lite.png" width="50%" id="centrar-imagen" alt="Mate electrico">
+            <p>
+                El mate es una tradición arraigada en la cultura argentina, y cualquier innovación relacionada con esta infusión suele generar tanto entusiasmo como escepticismo. Uno de los inventos más recientes en este ámbito es el mate eléctrico, una creación argentina que promete revolucionar la manera de tomar mate, pero ¿es realmente un avance o simplemente una moda pasajera?
+                <br>
+                <br>
+                El mate eléctrico no calienta el agua, sino que se encarga de mantener la temperatura de la yerba para evitar que esta se lave. Utiliza un puerto USB para su alimentación y tecnología inductiva que permite un uso inalámbrico. El objetivo principal es que la yerba se mantenga en una temperatura ideal, por encima de los 60°, asegurando que no se enfríe y que el proceso de cebar mate sea más homogéneo a lo largo del día.
+                <br>
+                <br>
+                Mientras que algunos lo ven como una solución innovadora, otros son más escépticos, argumentando que una parte esencial del ritual del mate es lidiar con los cambios naturales de la yerba y el agua. Entonces, ¿es el mate eléctrico una revolución o simplemente un gadget innecesario?
+                <br>
+                <br>
+                <cite>"Es un excelente mate para las personas que trabajan y estudian y quieren estar mucho mas tiempo tomando mate" "Si sos un colgado como yo, te recontra conviene este mate"</cite> son algunos de los comentarios de la gente que adquirió este mate
+            </p>
+        </div>
+        <br>
+        <caption>Tabla comparativa</caption>
+        <br>
+        <table>
+            <tr>
+                <th style="color: white; font-weight: bold;">Característica</th>
+                <th style="color: white; font-weight: bold;">Mate Eléctrico</th>
+                <th style="color: white; font-weight: bold;">Mate Tradicional</th>
+            </tr>
+            <tr>
+                <th>Fuente de calor</th>
+                <th>Mantiene la temperatura de la yerba </th>
+                <th>Depende del agua caliente</th>
+            </tr>
+            <tr>
+                <th>Conectividad</th>
+                <th>Puerto USB, inalámbrico (inductivo)</th>
+                <th>No requiere conexión</th>
+            </tr>
+            <tr>
+                <th>Temperatura de la yerba</th>
+                <th>Se mantiene por encima de 60°C</th>
+                <th>Varía según la cantidad de cebadas</th>
+            </tr>
+            <tr>
+                <th>Precio</th>
+                <th>Depende del modelo, hay mas caros y baratos (en general son mas caros)</th>
+                <th>Mas accesible, depende del modelo</th>
+            </tr>
+            <tr>
+                <th>Portabilidad</th>
+                <th>Limitada por la necesidad de energía para funcionar</th>
+                <th>Totalmente portátil</th>
+            </tr>
+        </table>
+        <br>
+        <p>Te dejo un video con mi review del mate eléctrico para que puedas verlo!</p>
+        <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/kjIqqUk0wks?si=kR72gdDHoY1j_WG5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </article>
+    <br>
+    <hr>
+    <br>
+    <article class="noticia">
+        <h2>Polémica por una yerba mate que lanzaron dos influencers</h2>
+        <img src="~/images/Yerba-Cosmico-1024x505.jpg" alt="Yerba Cosmico" width="40%" id="centrar-imagen">
+        <h4>Muchos usuarios tildaron de negativo que una norteamericana venda un producto de origen nacional</h4>
+        <p>
+            "Cósmico", la yerba mate que lanzaron una pareja de influencers en la Argentina generó bastante polémica en las redes sociales. El principal motivo de la ola de críticas es que los creadores de contenido viven en los Estados Unidos. Alguno de los comentarios que circularon fueron: “me cortaría las manos antes de comprar la yerba de un yankee” o se preguntaron “qué conocerán estos tiktokers sobre la cultura de la yerba mate”.
+            <br><br>
+            Los creadores de "Cósmico" son Hernán Regiardo, un argentino que se fue a vivir a los Estados Unidos y se enamoró de Samantha Trottier, quien a medida que avanzaba la relación se fue “argentinizando” y se hizo fanática de los alfajores, las medialunas y el mate.
+            Para celebrarlo Sam se metió dentro de un chango de supermercado y posó con un paquete de yerba mate y luego se unió a Hernán para realizar una foto con un carrito lleno de paquetes de yerba mate frente a la fachada del supermercado.
+            <br><br>
+            Estas imágenes suscitaron el descontento de algunos usuarios, que se quejaban del origen foráneo de la yerba y los acusaban de “hacer plata con Argentina mientras vivían en Estados Unidos”.
+            Ante las críticas, los influencers salieron a defenderse. Trottier publicó un video a modo de descargo en sus redes sociales: “Ayer posteé un tweet que se hizo viral y hablaba del lanzamiento de nuestra marca de yerba mate Cósmico en todas las sucursales de Coto. Obvio soy yankee, mi esposo es de Argentina y hay un montón de hate y esto es lo que quiero decirle a los haters: primero el producto está cien por ciento hecho en Argentina: el paquete, el sticker, la yerba adentro, todo hecho en Argentina. Y la yerba la hacemos con una cooperativa, entonces toda la plata que estamos invirtiendo va a personas argentinas”.
+            <br><br>
+            A pesar de las explicaciones, la polémica en torno a "Cósmico" sigue dividiendo opiniones. Mientras algunos defienden el emprendimiento como una forma de llevar la cultura del mate a nuevas fronteras y apoyar a productores locales, otros continúan cuestionando la legitimidad del proyecto por la distancia geográfica de sus creadores con Argentina. Lo cierto es que, más allá de las críticas, la yerba mate Cósmico ha logrado captar la atención del público, y solo el tiempo dirá si este proyecto encuentra su lugar en un mercado tan competitivo y tradicional como el del mate.
+            <br> <br>
+            Te dejamos una reseña de nuestro amigo Sudamerican Mate para que puedas verla!
+        </p>
+        <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/Bzkip2j48os?si=2SdpElqRE_jZFPjx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </article>
+    <hr>
+    <article class="noticia">
+        <h2>Las claves para preparar un mate</h2>
+        <img src="~/images/pasosmate.jpg" alt="Preparar Mate" id="centrar-imagen">
+        <h3>1. Llenar un termo con agua caliente.</h3>
+        <p>
+            <b>Temperatura justa:</b> La temperatura ideal del agua oscila entre los 75°C y 80°C. Si el agua hierve, la yerba se quemará, liberando un sabor amargo y astringente. Un truco para saber si el agua está lista es cuando empieza a formar pequeñas burbujas en el fondo de la pava o hervidor.
+            <b>Tipo de agua:</b> Si bien el agua corriente potable es la más común, usar agua filtrada o mineral puede realzar el sabor del mate.
+        </p>
+        <h3>2. Arrojar yerba en el mate y agitar.</h3>
+        <p>La consigna es nuevamente estricta y requiere que el mate no zozobre de yerba ni tampoco que fafalte. A ojo (nada de medidores) llená hasta las tres cuartas partes del recipiente. Acto seguido, tapá con una mano la boca del mate, invertila y luego agitala un par de veces para quitarle el polvo. No te olvides después de soplar la palma de tu mano para no manchar lo primero que agarres. <b>Calidad de la yerba:</b> La elección de la yerba es fundamental. Existen diferentes tipos de yerba mate (con palo, sin palo, saborizadas, orgánicas, etc.). Experimentar con distintas marcas y variedades te ayudará a encontrar tu favorita.</p>
+        <h3>3. Agitar el mate:</h3>
+        <p><b>Objetivo:</b> Al agitar el mate con la mano tapando la boca e inclinando el mate en unos 45°, logramos que el polvillo de la yerba suba a la superficie. Esto evita que la bombilla se tape y asegura un flujo constante de agua.</p>
+        <h3>4. Acomodar la yerba:</h3>
+        <p><b>Formar el hueco:</b> Inclina el mate y con suaves golpecitos, desplaza la yerba hacia un lado, creando un hueco en el lado opuesto. Este hueco es donde se colocará la bombilla y se cebará el mate.</p>
+        <h3>5. Humedecer la yerba:</h3>
+        <p><b>Agua tibia:</b> Es importante usar agua tibia en este paso para que la yerba se hidrate lentamente y libere sus aromas de forma gradual. Vierte el agua con cuidado en el hueco, evitando mojar toda la yerba. <b>Tiempo de reposo:</b> Deja reposar la yerba húmeda durante 2 a 5 minutos antes de introducir la bombilla. Esto permite que se active y se prepare para la cebada, ademas de que al hidratar la yerba queda formada una pequeña montaña que permite que se alargue la cebada del mate</p>
+        <h3>6. Introducir la bombilla:</h3>
+        <p><b>Ubicación precisa:</b> Coloca la bombilla en el hueco húmedo, con la parte del filtro hacia abajo. Introdúcela con suavidad, sin revolver la yerba. <b>Tipo de bombilla:</b> Existen bombillas de diferentes materiales (acero inoxidable, alpaca, caña) y con distintos tipos de filtro. Elegir una bombilla de calidad facilitará la cebada y la limpieza.</p>
+        <h3>Cebar el mate:</h3>
+        <p><b>Cebar en el hueco:</b> Siempre vierte el agua caliente en el hueco donde está la bombilla, evitando mojar toda la yerba. Esto permite disfrutar de un mate duradero y con buen sabor. Flujo de agua:</b> Sirve el agua con un chorro fino y constante, sin salpicar.</p>
+        <h3>Disfrutar del mate:</h3>
+        <p><b>Compartir:</b> El mate es una bebida social que se comparte con amigos y familiares. Ofrecer el mate a los demás es una muestra de hospitalidad y amistad.<b>Cuidado del mate:</b> Lava el mate y la bombilla después de cada uso para evitar que se formen hongos y bacterias.</p>
+        <p>A continuación te dejamos un video para que puedas ver como armar un buen mate: </p>
+        <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/l7X6C3hTjBY?si=e6an6Hzv2a8kdXZE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </article>
+</section>
+
+@section Scripts {
+    <script>
+        let indiceImagen = 1;
+        mostrarImagen(indiceImagen);
+
+        function cambiarImagen(n) {
+            mostrarImagen(indiceImagen += n);
+        }
+
+        function imagenActual(n) {
+            mostrarImagen(indiceImagen = n);
+        }
+
+        function mostrarImagen(n) {
+            let i;
+            const imagenes = document.getElementsByClassName("carrusel-imagen");
+            const puntos = document.getElementsByClassName("punto");
+            if (n > imagenes.length) { indiceImagen = 1 }
+            if (n < 1) { indiceImagen = imagenes.length }
+
+            for (i = 0; i < imagenes.length; i++) {
+                imagenes[i].classList.remove("active");
+            }
+            for (i = 0; i < puntos.length; i++) {
+                puntos[i].classList.remove("active");
+            }
+
+            imagenes[indiceImagen - 1].classList.add("active");
+            puntos[indiceImagen - 1].classList.add("active");
+        }
+
+        setInterval(function () {
+            cambiarImagen(1);
+        }, 7000);
+    </script>
+}
